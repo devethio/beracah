@@ -1,0 +1,66 @@
+<!-- {"title": "Request a quote | Beracah Impex FZCO", "description": "Send one quote request for all the products you need. Choose delivery terms, destination port and payment method, and we'll reply with a proforma invoice.", "path": "/quote"} -->
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Request a quote</h1>
+    <p class="lead">Choose your products, add quantities and delivery details. We'll reply with availability, pricing and a proforma invoice.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:56px" id="quote-app">
+  <div class="wrap quote-grid">
+    <aside class="quote-items panel panel-fog" aria-labelledby="qi-title">
+      <h2 id="qi-title">Your products</h2>
+      <p data-items-count>No products selected yet</p>
+      <ul class="qi-list" id="qi-list"></ul>
+      <a class="text-link" href="/products">Add more products {{icon:arrow}}</a>
+    </aside>
+
+    <form class="panel" id="quote-form" novalidate>
+      <h2 class="fieldset-title">Your details</h2>
+      <div class="form-grid">
+        <div class="field"><label for="q-name">Full name</label><input id="q-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="q-company">Company</label><input id="q-company" name="company" autocomplete="organization" required></div>
+        <div class="field"><label for="q-email">Email</label><input id="q-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="q-phone">Phone or WhatsApp</label><input id="q-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="field"><label for="q-country">Country</label>
+          <select id="q-country" name="country" required>
+            <option value="">Select country</option><option>Ethiopia</option><option>Djibouti</option><option>Kenya</option><option>Somalia</option><option>Somaliland</option><option>South Sudan</option><option>Sudan</option><option>Eritrea</option><option>Uganda</option><option>Tanzania</option><option>United Arab Emirates</option><option>Saudi Arabia</option><option>Other</option>
+          </select></div>
+        <div class="field"><label for="q-type">Type of business</label>
+          <select id="q-type" name="business_type">
+            <option value="">Select one</option><option>Manufacturer</option><option>Contractor or developer</option><option>Distributor or wholesaler</option><option>Fleet operator</option><option>Government or institution</option><option>Other</option>
+          </select></div>
+      </div>
+
+      <h2 class="fieldset-title">Delivery and payment</h2>
+      <div class="form-grid">
+        <div class="field full"><span class="label">Delivery terms</span>
+          <div class="choice-group">
+            <label class="choice"><input type="radio" name="incoterm" value="FOB"><span>FOB</span></label>
+            <label class="choice"><input type="radio" name="incoterm" value="CFR"><span>CFR</span></label>
+            <label class="choice"><input type="radio" name="incoterm" value="CIF"><span>CIF</span></label>
+            <label class="choice"><input type="radio" name="incoterm" value="Not sure" checked><span>Not sure yet</span></label>
+          </div></div>
+        <div class="field"><label for="q-port">Destination port</label>
+          <select id="q-port" name="destination_port">
+            <option>Djibouti</option><option>Berbera</option><option>Mombasa</option><option>Dar es Salaam</option><option>Port Sudan</option><option>Jebel Ali</option><option>Other</option>
+          </select></div>
+        <div class="field"><label for="q-date">Needed by</label><input id="q-date" name="needed_by" type="date"></div>
+        <div class="field full"><span class="label">Preferred payment</span>
+          <div class="choice-group">
+            <label class="choice"><input type="radio" name="payment" value="LC"><span>Letter of credit</span></label>
+            <label class="choice"><input type="radio" name="payment" value="CAD"><span>Cash against documents</span></label>
+            <label class="choice"><input type="radio" name="payment" value="T/T"><span>Bank transfer (T/T)</span></label>
+            <label class="choice"><input type="radio" name="payment" value="To be discussed" checked><span>To be discussed</span></label>
+          </div></div>
+        <div class="field full"><label for="q-notes">Notes <span class="hint">Specifications, brands, packing or anything else we should know</span></label><textarea id="q-notes" name="notes"></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="q-web">Leave this empty</label><input id="q-web" name="website_url" tabindex="-1" autocomplete="off"></div>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-navy" type="submit">Send quote request</button>
+        <p class="form-note">We usually reply within one business day.</p>
+      </div>
+      <div class="form-status" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
